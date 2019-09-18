@@ -29,6 +29,13 @@ class MainActivity : AppCompatActivity() {
 
     fun randomMe(view: View){
         val randomIntent = Intent(this, SecondActivity::class.java)
+
+        val numberShownString = findViewById<TextView>(R.id.textView)
+        val numberShown = numberShownString.text.toString()
+        var count: Int = Integer.parseInt(numberShown)
+
+        randomIntent.putExtra(SecondActivity.TOTAL_COUNT, count)
+
         startActivity(randomIntent)
     }
 }
