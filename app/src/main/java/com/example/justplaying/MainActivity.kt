@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val aboutButton: Button = findViewById(R.id.about_button)
         aboutButton.setOnClickListener { aboutMe() }
+        val colorButton: Button = findViewById(R.id.color_button)
+        colorButton.setOnClickListener { colorMe() }
         val countButton: Button = findViewById(R.id.count_button)
         countButton.setOnClickListener { countMe() }
         val randomButton: Button = findViewById(R.id.random_button)
@@ -24,6 +26,11 @@ class MainActivity : AppCompatActivity() {
     private fun aboutMe(){
         val aboutIntent = Intent(this, AboutActivity::class.java)
         startActivity(aboutIntent)
+    }
+
+    private fun colorMe(){
+        val colorIntent = Intent(this, ColorActivity::class.java)
+        startActivity(colorIntent)
     }
 
     private fun countMe(){
